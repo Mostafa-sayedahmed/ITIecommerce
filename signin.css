@@ -1,0 +1,44 @@
+*{
+    font-family:cursive;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.form{
+    
+    background-image: url("flower.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+  
+}
+.formcontainer{
+    padding: 25px;
+    margin: 50px;
+    width: 30%;
+    height: 80%;
+    background-color: rgb(255, 227, 195);
+    border-radius: 20px;
+    /* display: inline-block; */
+}
+label {
+    padding: 5px;
+     margin: 5px;
+     color: #2B3A55;
+     font-weight:lighter;    
+ }
+input{
+    
+    padding: 5px;
+    margin: 5px;
+    color: #2B3A55;
+    border-radius: 20px;
+    
+}
+.formcontainer button{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;  
+    background-color: #2B3A55; 
+    color: #eef1f7;
+}

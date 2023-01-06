@@ -1,0 +1,50 @@
+
+*{
+    font-family:cursive;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.form{
+    
+    background-image: url("/assets/imges/flower.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    
+}
+
+.fcontainer{
+    padding: 40px;
+    background-color: rgb(255, 227, 195);
+    height: fit-content;
+    border-radius: 20px;
+    margin: 40px;
+    width: fit-content;
+    /* display: inline-block; */
+   
+}
+
+
+label {
+   padding: 5px;
+    margin: 5px;
+    color: #2B3A55;
+    font-weight:lighter;    
+}
+input{
+    
+    padding: 5px;
+    margin: 5px;
+    color: #2B3A55;
+    border-radius: 20px;
+    
+}
+.fcontainer button{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;  
+    background-color: #2B3A55; 
+    color: #eef1f7;
+}
+    
