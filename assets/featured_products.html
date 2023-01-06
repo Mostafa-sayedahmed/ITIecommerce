@@ -28,8 +28,12 @@
       
      </div>
     <div class="card-footer">
-        <button href="www.google.com">View Product</button>
-    </div>
+
+          <form action="/prod-page.html">
+            <input type="text" id="pid" name="pid" value="" hidden >
+                <input type="submit" value="view Product">
+        </form> 
+   </div>
 
 </div>
 </template>  
@@ -61,6 +65,8 @@
           console.log(dataAfterParse[i])
                   var temp =document.getElementById('cardtemp').content
                     var newcontent =document.importNode(temp,true)
+                   var pid = newcontent.getElementById('pid')
+                    pid.setAttribute('value',dataAfterParse[i].prod_id);
                     newcontent.getElementById('pro_name').textContent=dataAfterParse[i].prod_name
                     newcontent.getElementById('pro_desc').textContent=dataAfterParse[i].prod_description
                     newcontent.getElementById('pro_price').textContent=dataAfterParse[i].prod_price+" .EGP"
