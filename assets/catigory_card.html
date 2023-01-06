@@ -1,66 +1,57 @@
-<link rel="stylesheet" href="/assets/catigory_card.css">
-<script src="/assets/category.js"></script>
+<link rel="stylesheet" href="./category.css">
 <body>
-    <div class="container">
-<div class="card">
-    <div class="card-header">
-        <p>Flower Life</p>
+<template id="cardtemp">  
+    <div class="card">
+    
+        <div class="card-header">
+            <p>Flower Life</p>
+        </div>
+    
+        <div class="card-img" >
+            <img id="pro_img" src="/imgs/product1.jpg" alt="...">
+            <i class="bx bx-heart"></i>
+        </div>
+    
+        <div class="card-footer">
+            <button id="cat" href="www.google.com"></button>
+        </div>
+    
     </div>
-
-    <div class="card-img">
-        <img src="" alt="...">
-        <i class="bx bx-heart"></i>
-    </div>
-
-    <div class="card-footer">
-        <p class="cat"></p>
-    </div>
-
+    </template> 
+<!-- start actual content -->
+<div class="featured_header">
+    <span>Categories of Flowers</span>
 </div>
-<div class="card">
-    <div class="card-header">
-        <p>Flower Life</p>
-    </div>
-
-    <div class="card-img">
-        <img src="/assets/imges/newslide.webp" alt="...">
-        <i class="bx bx-heart"></i>
-    </div>
-
-    <div class="card-footer">
-        <p class="cat"></p>
-    </div>
-
+<div class="featured" id="featured_container" >
+    
 </div>
-<div class="card">
-    <div class="card-header">
-        <p>Flower Life</p>
-    </div>
-
-    <div class="card-img">
-        <img src="/imgs/product1.jpg" alt="...">
-        <i class="bx bx-heart"></i>
-    </div>
-
-    <div class="card-footer">
-        <p class="cat"></p>
-    </div>
-
-</div>
-<div class="card">
-    <div class="card-header">
-        <p>Flower Life</p>
-    </div>
-
-    <div class="card-img">
-        <img src="/imgs/product1.jpg" alt="...">
-        <i class="bx bx-heart"></i>
-    </div>
-
-    <div class="card-footer">
-        <p class="cat"></p>
-    </div>
-
-</div>
-    </div>
 </body>
+<script defer>
+    // calling JSON file
+    var httpRequestall = new XMLHttpRequest();
+    httpRequestall.open("GET","./products.json", true);
+    httpRequestall.onreadystatechange = function () {
+    if (httpRequestall.readyState == 4 && httpRequestall.status == 200)
+     {
+            var dataRes=httpRequestall.response;
+            var dataAfterParse=JSON.parse(dataRes);
+        for(var i=0; i<4;i++)
+        {
+            
+                  var temp =document.getElementById('cardtemp').content
+                    var newcontent =document.importNode(temp,true)
+                    newcontent.getElementById('cat').textContent=dataAfterParse[i].category
+                    var proimg =newcontent.getElementById('pro_img')
+                    proimg.setAttribute('src',dataAfterParse[i].prod_image.img1);
+                
+                document.getElementById('featured_container').appendChild(newcontent)
+
+          
+            
+        }
+        // console.log(dataAfterParse);
+
+    }
+}
+httpRequestall.send();
+</script>
