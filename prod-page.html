@@ -9,20 +9,21 @@
 </head>
 <body>
         
-       
+    <!-- embedding header -->
+    <!-- <div data-include="header"></div> -->
 
-        <section>
-            <div class="container">
-                <div class="row ">
+    <section>
+        <div class="container">
+            <div class="row ">
                     <div class="section-col">
-                            <div  class="div-img1">
-                                <img id="img1" src="images/1-32.jpg" alt="">
-                            </div>
-                            <div class="div-img2">
-                                <img class="img" src="images/1-32.jpg" alt="">
-                                <img class="img" src="images/WhatsApp Image 2022-11-17 at 11.02.04 PM.jpeg" alt="">
-                                <img class="img" src="images/EUSPA Logo Contest Proposal.png" alt="">
-                            </div>
+                        <div  class="div-img1">
+                            <img id="img1" src="images/1-32.jpg" alt="">
+                        </div>
+                        <div class="div-img2">
+                            <img class="img" src="images/1-32.jpg" alt="">
+                            <img class="img" src="images/WhatsApp Image 2022-11-17 at 11.02.04 PM.jpeg" alt="">
+                            <img class="img" src="images/EUSPA Logo Contest Proposal.png" alt="">
+                        </div>
                     </div>
                     <div class="section-col">
                         <h2 id="prodname">single product demo</h2>
@@ -39,22 +40,23 @@
                 </div>
             </div>
         </section>
-
+        <!-- embedding footer -->
+    <!-- <div data-include="footer"></div> -->
         
         <link rel="stylesheet" href="style-prod.css">
         <script>
             $(function () {
-            var includes = $('[data-include]')
-            $.each(includes, function () {
-              var file = '/assets/' + $(this).data('include') + '.html'
-              $(this).load(file)
-            })  
-          })
+                var includes = $('[data-include]')
+                $.each(includes, function () {
+                    var file = '/assets/' + $(this).data('include') + '.html'
+                    $(this).load(file)
+                })  
+            })
 
 
           
         
-
+            
         </script>
         <script src="prod.js"></script>
 </body>

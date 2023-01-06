@@ -1,4 +1,14 @@
+/**********************for embeding header and footer ***********************/
 
+$(function () {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+          var file = 'assets/' + $(this).data('include') + '.html'
+          $(this).load(file)
+        })  
+      })
+
+/****************************************************************************/
 
 var number=document.getElementById("number")
 var orderTotal=document.getElementById("order-total")
