@@ -151,4 +151,8 @@
     color: #E8C4C4;
     font-size: 20px;
     letter-spacing: .5px;
+    transition: .5s;
 }
+.card .card-footer input:hover{
+    background-color: #f05656;
+    }
