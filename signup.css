@@ -7,9 +7,13 @@
 }
 
 .form{
-    
+    display: flex;
+    justify-content: center;
     background-image: url("/assets/imges/flower.png");
-    height: 100vh;
+    height: 100%;
+    padding: 30px;
+    margin-top: 30px;
+
     background-repeat: no-repeat;
     
 }
@@ -19,7 +23,6 @@
     background-color: rgb(255, 227, 195);
     height: fit-content;
     border-radius: 20px;
-    margin: 40px;
     width: fit-content;
     /* display: inline-block; */
    
