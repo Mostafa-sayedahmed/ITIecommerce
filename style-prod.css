@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
 
-    background-color:#ce7777 ;
 }    
 
 body{
     width: 100%;
     height: 100%;
+    background-color:#ce7777 ;
+
 }
 
 .product-content-container{
