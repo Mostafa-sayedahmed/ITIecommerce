@@ -10,8 +10,9 @@
         for(var i=0; i<dataAfterParse.length;i++)
         {
             document.getElementsByClassName("cat")[i].innerHTML=dataAfterParse[i].category;
-            document.getElementsByClassName("card-img")[i].innerHTML= "<img src="+" ' "+dataAfterParse[i].prod_image.img2+" 'width=150 height=150><br>";;
-            
+            document.getElementsByClassName("catcard-img")[i].innerHTML= "<img src="+" ' "+dataAfterParse[i].prod_image.img2+" 'width=150 height=150><br>";;
+            console.log(dataAfterParse[i].category)
+            console.log(dataAfterParse[i].prod_image.img2)
         }
           
           
