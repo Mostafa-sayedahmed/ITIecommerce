@@ -6,17 +6,22 @@
 }
 
 .form{
-    
+    display: flex;
+    justify-content: center;
     background-image: url("flower.png");
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
+    padding: 25px;
   
 }
 .formcontainer{
+    display: flex;
+    flex-direction: column;
+    
     padding: 25px;
-    margin: 50px;
-    width: 30%;
-    height: 80%;
+    margin-top: 30px;
+    width: 500px;
+    /* height: 50%; */
     background-color: rgb(255, 227, 195);
     border-radius: 20px;
     /* display: inline-block; */
@@ -37,7 +42,7 @@ input{
 }
 .formcontainer button{
     padding: 5px;
-    margin: 5px;
+    margin: 20px 5px;
     border-radius: 20px;  
     background-color: #2B3A55; 
     color: #eef1f7;
