@@ -1,5 +1,4 @@
 /**********************for embeding header and footer ***********************/
-var cnt = 0;
 $(function () {
         var includes = $('[data-include]')
         $.each(includes, function () {
@@ -97,14 +96,28 @@ selectImg3.addEventListener("click", function () {
 
 
 
+var cnt
 function addtocart() {
-      
+       
+        cnt = localStorage.getItem('counter');
+        if(localStorage.getItem('counter') ===null){
+                cnt =0;
+                localStorage.setItem("counter",cnt);
+                localStorage.setItem("flowername"+cnt, document.getElementById("prodname").innerText);
+                localStorage.setItem("price" + cnt, document.getElementById("prod-price").innerText);
+                localStorage.setItem("imge" + cnt, document.getElementById("img1").src);
+                console.log(cnt);
+
+      }
+      else{
+        
+        console.log(cnt);
+        cnt++;
         localStorage.setItem("flowername"+cnt, document.getElementById("prodname").innerText);
         localStorage.setItem("price" + cnt, document.getElementById("prod-price").innerText);
         localStorage.setItem("imge" + cnt, document.getElementById("img1").src);
-        localStorage.setItem("counter", cnt);
         console.log(cnt);
-        cnt++;
+      }
 }
 
 
