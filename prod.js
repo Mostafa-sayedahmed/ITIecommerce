@@ -15,8 +15,8 @@ var orderTotal=document.getElementById("order-total")
 var prodPrice=document.getElementById("prod-price")
 
 number.onchange=function(){
-        orderTotal.style="color:#2b3a55;font-weight:bold"        
-       var res= number.value * 49.00;
+        // orderTotal.style="color:#2b3a55;font-weight:bold"        
+       var res= number.value * document.getElementById('prod-price').innerText;
         orderTotal.innerText=res;
 
 }
@@ -52,7 +52,10 @@ if (httpRequestall.readyState == 4 && httpRequestall.status == 200)
         document.getElementById('prodname').innerText= dataAfterParse[i].prod_name
         document.getElementById('prod-desc').innerText= dataAfterParse[i].prod_description
         document.getElementById('prod-category').innerText= dataAfterParse[i].category
-        document.getElementById('prod-price').innerText= dataAfterParse[i].prod_price
+        document.getElementById('prod-price').innerText= dataAfterParse[i].prod_price 
+        var res= number.value * document.getElementById('prod-price').innerText;
+        orderTotal.innerText=res 
+
         /******************display imgs**********************/
         document.getElementById("img1").setAttribute('src',dataAfterParse[i].prod_image.img1)
         document.getElementsByClassName("img")[0].setAttribute('src',dataAfterParse[i].prod_image.img1)
