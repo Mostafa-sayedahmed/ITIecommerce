@@ -23,7 +23,7 @@ function blurefun() {
 function confemail() {
 
    
-    reg1 = /^([A-Za-z]{2,7}[0-9]{2,5})@(gmail|outlock)(.com|.net|.edu)$/
+    reg1 = /^([A-Za-z]{2,7})@(gmail|outlock)(.com|.net|.edu)$/
 
     mail = document.getElementById("mail").value;
    if (reg1.test(mail) == true ) {
@@ -70,24 +70,27 @@ function conf1(){
 function validation(){
     var flg=1;
     var elm=document.getElementsByTagName("input");
-    if(pas1!=pas){
+    if(pas1.value!=pas.value){
         flg=0;
+        console.log(flg);
+        console.log(pas1,pas);
     }
-    for(var i=0;i<elm.length;i++){
-        if(elm[i].value==''){
-            flg=0;
-            break;
-        }
-    }  
+   
+      
     if(flg==0){
+        console.log(flg,'3');
         document.getElementById("myForm").addEventListener("submit",function(e){
             e.preventDefault();
         })
            
     }
-    else{
-       
-        
-    }
+ 
 }
 
+function rememberme() {
+   
+
+    localStorage.setItem("username", document.getElementById("nm").value);
+    localStorage.setItem("mail",document.getElementById("mail").value);
+    localStorage.setItem("password",document.getElementById("pas").value);
+}
