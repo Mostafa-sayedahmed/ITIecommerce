@@ -22,6 +22,9 @@ console.log(newcontent.getElementById('floname').innerHtml );
 
 newcontent.getElementById('floimge').setAttribute('src', localStorage.getItem('imge'+i));
 newcontent.getElementById('prc').textContent = localStorage.getItem('price'+i);
+// newcontent.getElementById('qunt').value = localStorage.getItem('quntity'+i);
+
+
 parent1.appendChild(newcontent);
 
 }

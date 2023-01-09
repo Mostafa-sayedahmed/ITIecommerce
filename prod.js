@@ -98,25 +98,55 @@ selectImg3.addEventListener("click", function () {
 
 function addtocart() {
        
+        var prodname = document.getElementById("prodname");
+        var price =document.getElementById("prod-price");
+        var number =document.getElementById("number");
+        var img1 =document.getElementById("img1");
+        
+
         if(localStorage.getItem('counter') ===null){
                 
                 localStorage.setItem("counter",0);
-                localStorage.setItem("flowername"+0, document.getElementById("prodname").innerText);
-                localStorage.setItem("price" + 0, document.getElementById("prod-price").innerText);
-                localStorage.setItem("imge" + 0, document.getElementById("img1").src);
+                localStorage.setItem("flowername"+0, prodname.innerText);
+                localStorage.setItem("price" + 0, price.innerText);
+                localStorage.setItem("quntity" +0, number.value);
+                localStorage.setItem("imge" + 0, img1.src);
                 console.log(cnt);
 
       }
       else{
-        var cnt = localStorage.getItem('counter')
-        cnt++;
-        localStorage.setItem("flowername"+cnt, document.getElementById("prodname").innerText);
-        localStorage.setItem("price" + cnt, document.getElementById("prod-price").innerText);
-        localStorage.setItem("imge" + cnt, document.getElementById("img1").src);
-        localStorage.setItem("counter",cnt);
+              var cnt = localStorage.getItem('counter')
+        for (let i = 0; i <= cnt; i++) {
+                console.log(cnt,i);
+                if (prodname.innerText == localStorage.getItem('flowername'+i)) {
+                        var priceres = parseInt(price.innerText)+parseInt(localStorage.getItem('price'+i))
+                        localStorage.setItem("price"+i,priceres)
+                        
+                        var quneres = parseInt(number.value) + parseInt(localStorage.getItem('quntity'+i))
+                        localStorage.setItem("quntity"+i,quneres)
 
-        console.log(cnt);
-      }
+                        console.log("item updated",res,quneres);
+
+                        
+                }
+                else{
+                        cnt++;
+                        localStorage.setItem("counter",cnt);
+                        localStorage.setItem("flowername"+cnt, prodname.innerText);
+                        localStorage.setItem("price" + cnt, price.innerText);
+                        localStorage.setItem("quntity" +cnt, number.value);
+                        localStorage.setItem("imge" + cnt, img1.src);
+                        console.log(cnt);   
+                }
+                        
+                }
+                
+                                    
+                    
+        }
+        
+        
+      
 }
 
 
