@@ -15,7 +15,7 @@ $(function () {
 
 // JavaScript code
 function search_products() {
-  let cards = document.querySelectorAll('.card');
+  let cards = document.querySelectorAll('.card2');
 	let input = document.getElementById('search').value;
 	input=input.toLowerCase();
 
