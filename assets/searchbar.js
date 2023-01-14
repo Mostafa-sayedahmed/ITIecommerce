@@ -1,7 +1,7 @@
 // JavaScript code
 function search_products() {
   let cards = document.querySelectorAll('.card2');
-	let input = document.getElementById('search').value;
+	let input = document.getElementById('form1').value;
 	input=input.toLowerCase();
 
 	var httpRequestall = new XMLHttpRequest();
