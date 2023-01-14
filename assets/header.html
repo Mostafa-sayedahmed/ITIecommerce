@@ -61,11 +61,16 @@
     </div>
   </nav>
   <script>
+    if(localStorage.getItem('counter')==null){
+      document.getElementById('cartcount').innerHTML= 0;
+
+    }else{
 console.log(parseInt(localStorage.getItem('counter'))+1)
 var cartcounter =parseInt(localStorage.getItem('counter'))+1
 console.log(cartcounter);
 document.getElementById('cartcount').innerHTML=cartcounter;
-  </script>
+    }  
+</script>
  
 <!--end of the header -->
 
