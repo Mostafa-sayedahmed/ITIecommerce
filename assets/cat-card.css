@@ -156,3 +156,5 @@
 .cat-card .cat-card-footer input:hover{
     background-color: #f05656;
     }
+    
+    .is-hidden { display: none; }
