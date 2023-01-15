@@ -13,10 +13,9 @@
 
   <div data-include="header"></div>
 
-  <body>
+  <body onload="totalprice()">
     <div class="wrapper">
       <h1>shoping cart</h1>
-
 
       <div class="container-shop">
         <div class="shop" id="shop1">
@@ -54,7 +53,9 @@
           <hr />
           <p><span>total</span><span id="total-price">220</span></p>
 
-          <a href="https://www.paypal.com/eg/signin"><i class="fa-solid fa-cart-arrow-down"></i>cheeck out</a>
+          <a href="https://www.paypal.com/eg/signin"
+            ><i class="fa-solid fa-cart-arrow-down"></i>cheeck out</a
+          >
         </div>
       </div>
     </div>
@@ -65,10 +66,9 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style-cart.css" />
-    <script src="cart-page.js"></script>
+    <script src="/cart-page.js"></script>
   </body>
 
-    <!-- footr file refrence  -->
-    <div data-include="footer"></div>
-
+  <!-- footr file refrence  -->
+  <div data-include="footer"></div>
 </html>

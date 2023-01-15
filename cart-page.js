@@ -33,13 +33,13 @@ for (var i = 0; i <= ln; i++) {
 
   parent1.appendChild(newcontent);
 }
-
-var qun = document.getElementById("qunt").value;
-console.log(qun);
-res = qun * parseInt(document.getElementById("prc").textContent);
-document.getElementById("total").innerHTML = res + "$";
-var tot = res + 20 + 120;
-document.getElementById("total-price").innerText = tot + "$";
-console.log(res, tot);
-
+function totalprice() {
+  var qun = document.getElementById("qunt").value;
+  console.log(qun);
+  res = qun * parseInt(document.getElementById("prc").textContent);
+  document.getElementById("total").innerHTML = res + "$";
+  var tot = res + 20 + 120;
+  document.getElementById("total-price").innerText = tot + "$";
+  console.log(res, tot);
+}
 ///////////////////
