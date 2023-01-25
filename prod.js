@@ -110,13 +110,14 @@ function addtocart() {
     console.log(cnt);
   } else {
     var cnt = localStorage.getItem("counter");
+
     for (let i = 0; i <= cnt; i++) {
       console.log(cnt, i);
       if (prodname.innerText == localStorage.getItem("flowername" + i)) {
-        var priceres =
-          parseInt(price.innerText) +
-          parseInt(localStorage.getItem("price" + i));
-        localStorage.setItem("price" + i, priceres);
+        // var priceres =
+        //   parseInt(price.innerText) +
+        //   parseInt(localStorage.getItem("price" + i));
+        // localStorage.setItem("price" + i, priceres);
 
         var quneres =
           parseInt(number.value) +
@@ -132,6 +133,7 @@ function addtocart() {
         localStorage.setItem("quntity" + cnt, number.value);
         localStorage.setItem("imge" + cnt, img1.src);
         console.log(cnt);
+        break;
       }
     }
   }
